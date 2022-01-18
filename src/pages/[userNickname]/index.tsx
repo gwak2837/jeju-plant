@@ -23,8 +23,6 @@ import SettingIcon from 'src/svgs/setting.svg'
 import { getUserNickname } from 'src/utils'
 import styled from 'styled-components'
 
-import { FetchedAllData } from '../zoom'
-
 const Background = styled.div`
   background-color: #fcfcfc;
   padding-bottom: 10px;
@@ -231,7 +229,7 @@ export default function UserPage() {
   useNeedToLogin()
 
   return (
-    <PageHead title={`@${userNickname} - 알파카살롱`} description={description}>
+    <PageHead title={`@${userNickname} - 제주식물`} description={description}>
       <Background>
         <GridContainerTemplate>
           {nickname === userNickname && (
@@ -276,7 +274,7 @@ export default function UserPage() {
               ? notifications.map((notification) => (
                   <NotificationCard key={notification.id} notification={notification} />
                 ))
-              : !notificationLoading && <FetchedAllData>알림이 없어요</FetchedAllData>}
+              : !notificationLoading && <h5>알림이 없어요</h5>}
             {notificationLoading && (
               <>
                 <NotificationLoadingCard />
@@ -287,7 +285,7 @@ export default function UserPage() {
           {!notificationLoading && hasMoreData && (
             <div ref={notificationInfiniteScrollRef}>무한 스크롤</div>
           )}
-          {!hasMoreData && <FetchedAllData>모든 알림을 불러왔어요</FetchedAllData>}
+          {!hasMoreData && <h5>모든 알림을 불러왔어요</h5>}
         </ContentBox>
       </Background>
     </PageHead>

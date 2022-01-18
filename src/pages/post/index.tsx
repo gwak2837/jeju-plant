@@ -7,7 +7,6 @@ import PostCard, { PostLoadingCard } from 'src/components/PostCard'
 import { Post, usePostsQuery } from 'src/graphql/generated/types-and-hooks'
 import useInfiniteScroll from 'src/hooks/useInfiniteScroll'
 import Navigation from 'src/layouts/Navigation'
-import PostTab from 'src/layouts/PostTab'
 import {
   NAVIGATION_HEIGHT,
   PRIMARY_COLOR,
@@ -16,8 +15,6 @@ import {
 } from 'src/models/constants'
 import WriteIcon from 'src/svgs/write-icon.svg'
 import styled from 'styled-components'
-
-import { FetchedAllData } from '../zoom/index'
 
 export const PrimaryH3 = styled.h3`
   color: ${PRIMARY_COLOR};
@@ -113,7 +110,7 @@ export default function PostsPage() {
   }
 
   return (
-    <PageHead title="피드 - 알파카살롱" description={description}>
+    <PageHead title="피드 - 제주식물" description={description}>
       <GridContainerPost>
         {posts
           ? posts.map((post, i) => <PostCard key={i} post={post as Post} />)
@@ -126,7 +123,7 @@ export default function PostsPage() {
         )}
       </GridContainerPost>
       {!loading && hasMoreData && <div ref={infiniteScrollRef}>무한 스크롤</div>}
-      {!hasMoreData && <FetchedAllData>모든 게시글을 불러왔어요</FetchedAllData>}
+      {!hasMoreData && <h5>모든 게시글을 불러왔어요</h5>}
 
       <FixedButton onClick={goToPostCreationPage}>
         <WriteIcon />
@@ -137,9 +134,5 @@ export default function PostsPage() {
 }
 
 PostsPage.getLayout = function getLayout(page: ReactElement) {
-  return (
-    <Navigation>
-      <PostTab>{page}</PostTab>
-    </Navigation>
-  )
+  return <Navigation>{page}</Navigation>
 }

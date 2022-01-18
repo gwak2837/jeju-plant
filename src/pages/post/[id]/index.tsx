@@ -436,7 +436,7 @@ export default function PostPage() {
   useNeedToLogin()
 
   return (
-    <PageHead title={`${post?.title ?? '건강문답'} - 알파카살롱`} description={description}>
+    <PageHead title={`${post?.title ?? '건강문답'} - 제주식물`} description={description}>
       <FlexColumnGrow>
         <Padding />
         <FlexContainerBetweenCenter>

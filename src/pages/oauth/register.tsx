@@ -214,9 +214,9 @@ export default function OAuthRegisterPage() {
   }, [setValue])
 
   return (
-    <PageHead title="회원 정보 입력 - 알파카살롱" description={description}>
+    <PageHead title="회원 정보 입력 - 제주식물" description={description}>
       <FlexContainerGrow>
-        <h2>알파카살롱에 오신 걸 환영해요</h2>
+        <h2>제주식물에 오신 걸 환영해요</h2>
         <H4>우아한 알파카님의 멋진 닉네임을 알려주세요</H4>
 
         <GridContainerForm onSubmit={handleSubmit(updateRegister)}>

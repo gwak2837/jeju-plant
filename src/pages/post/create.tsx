@@ -183,7 +183,7 @@ export function resizeTextareaHeight(e: KeyboardEvent<HTMLTextAreaElement>) {
   eventTarget.style.height = `${eventTarget.scrollHeight}px`
 }
 
-const description = '알파카살롱에 글을 작성해보세요'
+const description = '제주식물에 글을 작성해보세요'
 
 export default function PostCreationPage() {
   const [imageInfos, setImageInfos] = useState<ImageInfo[]>([])
@@ -290,7 +290,7 @@ export default function PostCreationPage() {
   useNeedToLogin()
 
   return (
-    <PageHead title="글쓰기 - 알파카살롱" description={description}>
+    <PageHead title="글쓰기 - 제주식물" description={description}>
       <form onSubmit={handleSubmit(createPost)}>
         <StickyHeader>
           <XIcon onClick={goBack} />

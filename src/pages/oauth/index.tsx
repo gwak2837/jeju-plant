@@ -41,7 +41,7 @@ export default function EventDetailPage() {
   }, [router])
 
   return (
-    <PageHead title="소셜 로그인 - 알파카살롱" description={description}>
+    <PageHead title="소셜 로그인 - 제주식물" description={description}>
       <div>소셜 로그인에 성공했어요. 잠시만 기다려주세요...</div>
     </PageHead>
   )

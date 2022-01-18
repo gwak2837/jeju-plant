@@ -47,7 +47,7 @@ type PreviousPostData = {
   imageUrls?: string[] | null
 }
 
-const description = '알파카살롱에 글을 작성해보세요'
+const description = '제주식물에 글을 작성해보세요'
 
 export default function PostUpdatePage() {
   const [oldImageInfos, setOldImageInfos] = useState<ImageInfo[]>([])
@@ -203,7 +203,7 @@ export default function PostUpdatePage() {
   useNeedToLogin()
 
   return (
-    <PageHead title="글 수정하기 - 알파카살롱" description={description}>
+    <PageHead title="글 수정하기 - 제주식물" description={description}>
       <form onSubmit={handleSubmit(updatePost)}>
         <StickyHeader>
           <XIcon onClick={goBack} />

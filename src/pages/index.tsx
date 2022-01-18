@@ -5,7 +5,6 @@ import { useRecoilValue } from 'recoil'
 import PageHead from 'src/components/PageHead'
 import Navigation from 'src/layouts/Navigation'
 import { currentUser } from 'src/models/recoil'
-import AlpacasalonText from 'src/svgs/alpacasalon-text.svg'
 import styled from 'styled-components'
 
 import { Slider } from './post/create'
@@ -140,32 +139,9 @@ export default function HomePage() {
   return (
     <PageHead>
       <Sticky>
-        <AlpacasalonText />
         {!nickname && <WhiteButton onClick={() => router.push('/login')}>로그인</WhiteButton>}
       </Sticky>
-
-      <SliderWithoutScollBar>
-        <Frame16to10>
-          <SnapNext />
-          <Image src="/images/banner.webp" alt="banner" layout="fill" objectFit="cover" />
-        </Frame16to10>
-        <Frame16to10>
-          <SnapNext />
-          <Image src="/images/banner2.webp" alt="banner" layout="fill" objectFit="cover" />
-        </Frame16to10>
-        <Frame16to10 background="#E2D7EC">
-          <SnapNext />
-          <Image src="/images/banner3.webp" alt="banner" layout="fill" objectFit="cover" />
-        </Frame16to10>
-        <Frame16to10>
-          <SnapStart />
-          <Image src="/images/banner4.webp" alt="banner" layout="fill" objectFit="cover" />
-        </Frame16to10>
-      </SliderWithoutScollBar>
-
-      <h2>👀 추천 Zoom 대화방</h2>
-
-      <h2>🔥 지금 핫한 이야기</h2>
+      행복의 비밀은 사랑이다
     </PageHead>
   )
 }

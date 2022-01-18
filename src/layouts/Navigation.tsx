@@ -21,7 +21,7 @@ const FixedNavigation = styled.nav`
   z-index: 1;
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
 
@@ -106,13 +106,6 @@ function Navigation({ children }: Props) {
           </FillA>
         </Link>
 
-        <Link href="/zoom" passHref>
-          <FillA selected={isZoomsPageSelected}>
-            <ZoomIcon selected={isZoomsPageSelected} />
-            <H4>Zoom</H4>
-          </FillA>
-        </Link>
-
         <Link href="/post" passHref>
           <FillA selected={isPostsPageSelected}>
             <ChatIcon selected={isPostsPageSelected} />
@@ -123,7 +116,7 @@ function Navigation({ children }: Props) {
         <Link href={`/@${nickname}`} passHref>
           <StrokeA selected={isMyPageSelected}>
             <PersonIcon hasNewNotifications={hasNewNotifications} selected={isMyPageSelected} />
-            <H4>my알파카</H4>
+            <H4>my제주식물</H4>
           </StrokeA>
         </Link>
       </FixedNavigation>

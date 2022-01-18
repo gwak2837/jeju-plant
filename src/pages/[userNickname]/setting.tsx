@@ -180,7 +180,7 @@ export default function UserPage() {
   useNeedToLogin()
 
   return (
-    <PageHead title={`@${userNickname} - 알파카살롱`} description={description}>
+    <PageHead title={`@${userNickname} - 제주식물`} description={description}>
       <FlexContainerHeight100>
         <div>
           <TitleIconWrapper onClick={goBack}>

@@ -93,7 +93,7 @@ const Text = styled.div`
   padding: 1.5rem;
 `
 
-const description = '알파카살롱에 로그인하세요'
+const description = '제주식물에 로그인하세요'
 
 function goToKakaoLoginPage() {
   window.location.replace(
@@ -105,11 +105,11 @@ export default function LoginPage() {
   const [isChecked, setIsChecked] = useState(false)
 
   return (
-    <PageHead title="로그인 - 알파카살롱" description={description}>
+    <PageHead title="로그인 - 제주식물" description={description}>
       <FlexGrowPadding>
-        <h4>당당하게 더 멋진 인생을 살고 싶은</h4>
+        <h4>당당하게 더 멋진 식물을 기르고 싶은</h4>
         <br />
-        <h2>멋쟁이 알파카님, 안녕하세요</h2>
+        <h2>멋쟁이 자생식물님, 안녕하세요</h2>
 
         <GridContainerTemplate>
           <SquareFrame>
@@ -123,12 +123,12 @@ export default function LoginPage() {
         </GridContainerTemplate>
 
         <Text>
-          알파카살롱은 <br />
-          <PrimaryColorText>40대 이상 여성</PrimaryColorText> 에게만 오픈된 공간이에요.
+          제주식물은 <br />
+          <PrimaryColorText>애인이 없는 사람</PrimaryColorText> 에게만 오픈된 공간이에요.
         </Text>
 
         <FlexContainerColumnEnd>
-          <H5>카카오 로그인으로 40대 이상 여성임을 확인해 주세요</H5>
+          <H5>카카오 로그인으로 애인이 없음을 확인해 주세요</H5>
 
           <AutoLogin htmlFor="auto-login">
             <LoginCheckBox

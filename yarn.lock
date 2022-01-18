@@ -3482,62 +3482,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"alpacasalon@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "alpacasalon@workspace:."
-  dependencies:
-    "@apollo/client": ^3.5.6
-    "@babel/core": ^7.16.5
-    "@graphql-codegen/add": ^3.1.0
-    "@graphql-codegen/cli": ^2.3.0
-    "@graphql-codegen/typescript": ^2.4.1
-    "@graphql-codegen/typescript-apollo-client-helpers": ^2.1.8
-    "@graphql-codegen/typescript-operations": ^2.2.1
-    "@graphql-codegen/typescript-react-apollo": ^3.2.2
-    "@svgr/webpack": ^6.1.2
-    "@testing-library/react": ^12.1.2
-    "@types/gtag.js": ^0.0.8
-    "@types/jest": ^27.0.3
-    "@types/navermaps": ^3.0.10
-    "@types/node": ^17.0.5
-    "@types/react": ^17.0.38
-    "@types/react-dom": ^17.0.11
-    "@types/react-infinite-scroller": ^1.2.2
-    "@types/styled-components": ^5.1.19
-    "@typescript-eslint/eslint-plugin": ^5.8.1
-    "@typescript-eslint/parser": ^5.8.1
-    babel-loader: ^8.2.3
-    date-fns: ^2.27.0
-    dotenv: ^10.0.0
-    eslint: ^7.32.0
-    eslint-config-next: ^12.0.7
-    eslint-config-prettier: ^8.3.0
-    eslint-config-standard: ^16.0.3
-    eslint-plugin-import: ^2.25.3
-    eslint-plugin-jest: ^25.3.2
-    eslint-plugin-jsx-a11y: ^6.5.1
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-promise: ^6.0.0
-    eslint-plugin-react: ^7.28.0
-    eslint-plugin-react-hooks: ^4.3.0
-    graphql: ^16.2.0
-    husky: ^7.0.4
-    inko: ^1.1.1
-    jest: ^27.4.5
-    next: 12.0.4
-    next-pwa: ^5.4.4
-    normalize.css: ^8.0.1
-    prettier: ^2.5.1
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    react-hook-form: ^7.22.5
-    react-toastify: ^8.1.0
-    recoil: ^0.5.2
-    styled-components: ^5.3.3
-    typescript: ^4.5.4
-  languageName: unknown
-  linkType: soft
-
 "anser@npm:1.4.9":
   version: 1.4.9
   resolution: "anser@npm:1.4.9"
@@ -7756,6 +7700,62 @@ __metadata:
   checksum: b604c51863260e374ccd62cd0cfe0b659f72cb71beb7d5fb5137dd65b04cf9d5603abd01f9f6eaaac8f4182f396d6cfae01e0b0844c2215c9c1e200572307cf9
   languageName: node
   linkType: hard
+
+"jeju-plant@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "jeju-plant@workspace:."
+  dependencies:
+    "@apollo/client": ^3.5.6
+    "@babel/core": ^7.16.5
+    "@graphql-codegen/add": ^3.1.0
+    "@graphql-codegen/cli": ^2.3.0
+    "@graphql-codegen/typescript": ^2.4.1
+    "@graphql-codegen/typescript-apollo-client-helpers": ^2.1.8
+    "@graphql-codegen/typescript-operations": ^2.2.1
+    "@graphql-codegen/typescript-react-apollo": ^3.2.2
+    "@svgr/webpack": ^6.1.2
+    "@testing-library/react": ^12.1.2
+    "@types/gtag.js": ^0.0.8
+    "@types/jest": ^27.0.3
+    "@types/navermaps": ^3.0.10
+    "@types/node": ^17.0.5
+    "@types/react": ^17.0.38
+    "@types/react-dom": ^17.0.11
+    "@types/react-infinite-scroller": ^1.2.2
+    "@types/styled-components": ^5.1.19
+    "@typescript-eslint/eslint-plugin": ^5.8.1
+    "@typescript-eslint/parser": ^5.8.1
+    babel-loader: ^8.2.3
+    date-fns: ^2.27.0
+    dotenv: ^10.0.0
+    eslint: ^7.32.0
+    eslint-config-next: ^12.0.7
+    eslint-config-prettier: ^8.3.0
+    eslint-config-standard: ^16.0.3
+    eslint-plugin-import: ^2.25.3
+    eslint-plugin-jest: ^25.3.2
+    eslint-plugin-jsx-a11y: ^6.5.1
+    eslint-plugin-node: ^11.1.0
+    eslint-plugin-promise: ^6.0.0
+    eslint-plugin-react: ^7.28.0
+    eslint-plugin-react-hooks: ^4.3.0
+    graphql: ^16.2.0
+    husky: ^7.0.4
+    inko: ^1.1.1
+    jest: ^27.4.5
+    next: 12.0.4
+    next-pwa: ^5.4.4
+    normalize.css: ^8.0.1
+    prettier: ^2.5.1
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-hook-form: ^7.22.5
+    react-toastify: ^8.1.0
+    recoil: ^0.5.2
+    styled-components: ^5.3.3
+    typescript: ^4.5.4
+  languageName: unknown
+  linkType: soft
 
 "jest-changed-files@npm:^27.4.2":
   version: 27.4.2

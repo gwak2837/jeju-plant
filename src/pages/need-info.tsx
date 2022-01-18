@@ -5,7 +5,7 @@ const description = ''
 
 export default function Page() {
   return (
-    <PageHead title="죄송합니다 - 알파카살롱" description={description}>
+    <PageHead title="죄송합니다 - 제주식물" description={description}>
       <div>
         40대 이상 여성임을 증명하기 위해 회원가입 시 성별, 출생년도, 생일 제공에 동의해주세요
       </div>
