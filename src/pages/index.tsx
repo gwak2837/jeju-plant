@@ -1,3 +1,4 @@
+import { Popover } from 'antd'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { ReactElement } from 'react'
@@ -27,72 +28,6 @@ const Sticky = styled.div`
   }
 `
 
-const SliderWithoutScollBar = styled(Slider)`
-  scrollbar-color: transparent transparent;
-  scrollbar-width: 0px;
-
-  ::-webkit-scrollbar {
-    height: 0;
-  }
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: transparent;
-    border: none;
-  }
-
-  :hover > li > *,
-  :focus-within > li > * {
-    animation-name: none;
-  }
-
-  @keyframes toNext {
-    75% {
-      left: 0;
-    }
-    95% {
-      left: 100%;
-    }
-    98% {
-      left: 100%;
-    }
-    99% {
-      left: 0;
-    }
-  }
-
-  @keyframes toStart {
-    75% {
-      left: 0;
-    }
-    95% {
-      left: -300%;
-    }
-    98% {
-      left: -300%;
-    }
-    99% {
-      left: 0;
-    }
-  }
-
-  @keyframes snap {
-    96% {
-      scroll-snap-align: center;
-    }
-    97% {
-      scroll-snap-align: none;
-    }
-    99% {
-      scroll-snap-align: none;
-    }
-    100% {
-      scroll-snap-align: center;
-    }
-  }
-`
-
 const WhiteButton = styled.button`
   border: 1px solid #eee;
   border-radius: 5px;
@@ -117,19 +52,51 @@ const Snap = styled.div`
   }
 `
 
-const SnapNext = styled(Snap)`
-  animation-name: toNext, snap;
-`
-
-const SnapStart = styled(Snap)`
-  animation-name: toStart, snap;
-`
-
-const Frame16to10 = styled.li<{ background?: string }>`
-  aspect-ratio: 16 / 10;
-  background: ${(p) => p.background ?? '#fff'};
-  flex: 0 0 100%;
+const Relative = styled.div`
   position: relative;
+  margin: 0 auto;
+  width: fit-content;
+`
+
+const Button = styled.button`
+  position: absolute;
+  z-index: 1;
+  border: 1px solid black;
+`
+
+const HeadButton = styled(Button)`
+  width: 5rem;
+  height: 5rem;
+  top: 0;
+  left: 50%;
+`
+
+const NeckButton = styled(Button)`
+  width: 5rem;
+  height: 2rem;
+  top: 5rem;
+  left: 50%;
+`
+
+const ChestButton = styled(Button)`
+  width: 5rem;
+  height: 4rem;
+  top: 7rem;
+  left: 50%;
+`
+
+const ShoulderButton = styled(Button)`
+  width: 2rem;
+  height: 4rem;
+  top: 5.5rem;
+  left: 40%;
+`
+
+const Shoulder2Button = styled(Button)`
+  width: 2rem;
+  height: 4rem;
+  top: 5.5rem;
+  left: 73%;
 `
 
 export default function HomePage() {
@@ -141,7 +108,85 @@ export default function HomePage() {
       <Sticky>
         {!nickname && <WhiteButton onClick={() => router.push('/login')}>로그인</WhiteButton>}
       </Sticky>
-      행복의 비밀은 사랑이다
+      <Relative>
+        <Image src="/images/body.png" alt="body" width="385" height="607" />
+        <Popover
+          content={
+            <div>
+              <div>머리에 좋은 자생식물</div>
+              <ol>
+                <div>자생식물1</div>
+                <div>자생식물2</div>
+                <div>자생식물3</div>
+              </ol>
+            </div>
+          }
+          trigger="click"
+        >
+          <HeadButton />
+        </Popover>
+        <Popover
+          content={
+            <div>
+              <div>목에 좋은 자생식물</div>
+              <ol>
+                <div>자생식물1</div>
+                <div>자생식물2</div>
+                <div>자생식물3</div>
+              </ol>
+            </div>
+          }
+          trigger="click"
+        >
+          <NeckButton />
+        </Popover>
+        <Popover
+          content={
+            <div>
+              <div>가슴에 좋은 자생식물</div>
+              <ol>
+                <div>자생식물1</div>
+                <div>자생식물2</div>
+                <div>자생식물3</div>
+              </ol>
+            </div>
+          }
+          trigger="click"
+        >
+          <ChestButton />
+        </Popover>
+        <Popover
+          content={
+            <div>
+              <div>어깨에 좋은 자생식물</div>
+              <ol>
+                <div>자생식물1</div>
+                <div>자생식물2</div>
+                <div>자생식물3</div>
+              </ol>
+            </div>
+          }
+          trigger="click"
+        >
+          <ShoulderButton />
+        </Popover>
+        <Popover
+          content={
+            <div>
+              <div>어깨에 좋은 자생식물</div>
+              <ol>
+                <div>자생식물1</div>
+                <div>자생식물2</div>
+                <div>자생식물3</div>
+              </ol>
+            </div>
+          }
+          trigger="click"
+        >
+          <Shoulder2Button />
+        </Popover>
+      </Relative>
+      <div>자생식물을 우수해요. 기존 건강기능식품에 비해 저렴한 가격에 효능을 얻을 수 있어요.</div>
     </PageHead>
   )
 }

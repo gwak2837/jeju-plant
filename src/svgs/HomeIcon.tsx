@@ -1,3 +1,5 @@
+import { PRIMARY_COLOR } from 'src/models/constants'
+
 type Props = {
   selected: boolean
 }
@@ -8,7 +10,7 @@ function HomeIcon({ selected }: Props) {
       {selected ? (
         <path
           d="M5 21V14H3.27324C2.40313 14 1.94813 12.9657 2.53608 12.3243L11.2628 2.80417C11.6592 2.3718 12.3408 2.3718 12.7372 2.80417L21.4639 12.3243C22.0519 12.9657 21.5969 14 20.7268 14H19V21C19 21.5523 18.5523 22 18 22H15C14.4477 22 14 21.5523 14 21V17H10V21C10 21.5523 9.55229 22 9 22H6C5.44772 22 5 21.5523 5 21Z"
-          fill="#7C2F70"
+          fill={PRIMARY_COLOR}
         />
       ) : (
         <path
