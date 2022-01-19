@@ -48,7 +48,7 @@ const Button = styled.button`
 const HeadButton = styled(Button)`
   width: 21%;
   height: 12%;
-  top: 1px;
+  top: 2px;
   left: 50%;
 `
 
@@ -56,6 +56,13 @@ const NeckButton = styled(Button)`
   width: 21%;
   height: 4%;
   top: 13%;
+  left: 50%;
+`
+
+const ChestButton = styled(Button)`
+  width: 21%;
+  height: 12%;
+  top: 18%;
   left: 50%;
 `
 
@@ -73,11 +80,32 @@ const Shoulder2Button = styled(Button)`
   left: 72%;
 `
 
-const ChestButton = styled(Button)`
-  width: 21%;
-  height: 12%;
-  top: 18%;
-  left: 50%;
+const ArmButton = styled(Button)`
+  width: 20%;
+  height: 18%;
+  top: 27%;
+  left: 29%;
+`
+
+const Arm2Button = styled(Button)`
+  width: 20%;
+  height: 18%;
+  top: 27%;
+  left: 72%;
+`
+
+const HandButton = styled(Button)`
+  width: 13%;
+  height: 10%;
+  top: 46%;
+  left: 23%;
+`
+
+const Hand2Button = styled(Button)`
+  width: 13%;
+  height: 10%;
+  top: 46%;
+  left: 85%;
 `
 
 const AbdomenButton = styled(Button)`
@@ -108,6 +136,7 @@ export default function HomePage() {
   return (
     <PageHead>
       <Sticky>
+        <div>제주식물</div>
         {!nickname && <WhiteButton onClick={() => router.push('/login')}>로그인</WhiteButton>}
       </Sticky>
 
@@ -128,7 +157,6 @@ export default function HomePage() {
         >
           <HeadButton />
         </Popover>
-
         <Popover
           content={
             <div>
@@ -144,7 +172,21 @@ export default function HomePage() {
         >
           <NeckButton />
         </Popover>
-
+        <Popover
+          content={
+            <div>
+              <div>가슴에 좋은 자생식물</div>
+              <ol>
+                <div>자생식물1</div>
+                <div>자생식물2</div>
+                <div>자생식물3</div>
+              </ol>
+            </div>
+          }
+          trigger="click"
+        >
+          <ChestButton />
+        </Popover>
         <Popover
           content={
             <div>
@@ -175,11 +217,10 @@ export default function HomePage() {
         >
           <Shoulder2Button />
         </Popover>
-
         <Popover
           content={
             <div>
-              <div>가슴에 좋은 자생식물</div>
+              <div>팔에 좋은 자생식물</div>
               <ol>
                 <div>자생식물1</div>
                 <div>자생식물2</div>
@@ -189,9 +230,54 @@ export default function HomePage() {
           }
           trigger="click"
         >
-          <ChestButton />
+          <ArmButton />
+        </Popover>
+        <Popover
+          content={
+            <div>
+              <div>팔에 좋은 자생식물</div>
+              <ol>
+                <div>자생식물1</div>
+                <div>자생식물2</div>
+                <div>자생식물3</div>
+              </ol>
+            </div>
+          }
+          trigger="click"
+        >
+          <Arm2Button />
         </Popover>
 
+        <Popover
+          content={
+            <div>
+              <div>손에 좋은 자생식물</div>
+              <ol>
+                <div>자생식물1</div>
+                <div>자생식물2</div>
+                <div>자생식물3</div>
+              </ol>
+            </div>
+          }
+          trigger="click"
+        >
+          <HandButton />
+        </Popover>
+        <Popover
+          content={
+            <div>
+              <div>손에 좋은 자생식물</div>
+              <ol>
+                <div>자생식물1</div>
+                <div>자생식물2</div>
+                <div>자생식물3</div>
+              </ol>
+            </div>
+          }
+          trigger="click"
+        >
+          <Hand2Button />
+        </Popover>
         <Popover
           content={
             <div>
@@ -207,7 +293,6 @@ export default function HomePage() {
         >
           <AbdomenButton />
         </Popover>
-
         <Popover
           content={
             <div>
@@ -223,7 +308,6 @@ export default function HomePage() {
         >
           <ThighButton />
         </Popover>
-
         <Popover
           content={
             <div>
