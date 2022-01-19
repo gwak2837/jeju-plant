@@ -8,12 +8,10 @@ import Navigation from 'src/layouts/Navigation'
 import { currentUser } from 'src/models/recoil'
 import styled from 'styled-components'
 
-import { Slider } from './post/create'
-
 const Sticky = styled.div`
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   background: #fff;
   padding: 0.6rem;
 
