@@ -61,42 +61,49 @@ const Relative = styled.div`
 const Button = styled.button`
   position: absolute;
   z-index: 1;
-  border: 1px solid black;
+  box-shadow: 0 0 0 1px black;
 `
 
 const HeadButton = styled(Button)`
-  width: 5rem;
-  height: 5rem;
+  width: 4.5rem;
+  height: 4.3rem;
   top: 0;
   left: 50%;
 `
 
 const NeckButton = styled(Button)`
-  width: 5rem;
-  height: 2rem;
-  top: 5rem;
-  left: 50%;
-`
-
-const ChestButton = styled(Button)`
-  width: 5rem;
-  height: 4rem;
-  top: 7rem;
+  width: 4.5rem;
+  height: 1.5rem;
+  top: 4.5rem;
   left: 50%;
 `
 
 const ShoulderButton = styled(Button)`
-  width: 2rem;
+  width: 2.1rem;
   height: 4rem;
   top: 5.5rem;
-  left: 40%;
+  left: 39%;
 `
 
 const Shoulder2Button = styled(Button)`
   width: 2rem;
   height: 4rem;
   top: 5.5rem;
-  left: 73%;
+  left: 72%;
+`
+
+const ChestButton = styled(Button)`
+  width: 4.5rem;
+  height: 4rem;
+  top: 6.2rem;
+  left: 50%;
+`
+
+const AbdomenButton = styled(Button)`
+  width: 4.5rem;
+  height: 4.5rem;
+  top: 10.4rem;
+  left: 50%;
 `
 
 export default function HomePage() {
@@ -185,8 +192,23 @@ export default function HomePage() {
         >
           <Shoulder2Button />
         </Popover>
+        <Popover
+          content={
+            <div>
+              <div>배에 좋은 자생식물</div>
+              <ol>
+                <div>자생식물1</div>
+                <div>자생식물2</div>
+                <div>자생식물3</div>
+              </ol>
+            </div>
+          }
+          trigger="click"
+        >
+          <AbdomenButton />
+        </Popover>
       </Relative>
-      <div>자생식물을 우수해요. 기존 건강기능식품에 비해 저렴한 가격에 효능을 얻을 수 있어요.</div>
+      <div>자생식물은 우수해요. 기존 건강기능식품에 비해 저렴한 가격에 효능을 얻을 수 있어요.</div>
     </PageHead>
   )
 }
