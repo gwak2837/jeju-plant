@@ -104,6 +104,20 @@ const AbdomenButton = styled(Button)`
   left: 50%;
 `
 
+const ThighButton = styled(Button)`
+  width: 3.8rem;
+  height: 7rem;
+  top: 15.4rem;
+  left: 42%;
+`
+
+const Thigh2Button = styled(Button)`
+  width: 3.7rem;
+  height: 7rem;
+  top: 15.4rem;
+  left: 62%;
+`
+
 export default function HomePage() {
   const router = useRouter()
   const { nickname } = useRecoilValue(currentUser)
@@ -130,6 +144,7 @@ export default function HomePage() {
         >
           <HeadButton />
         </Popover>
+
         <Popover
           content={
             <div>
@@ -145,21 +160,7 @@ export default function HomePage() {
         >
           <NeckButton />
         </Popover>
-        <Popover
-          content={
-            <div>
-              <div>가슴에 좋은 자생식물</div>
-              <ol>
-                <div>자생식물1</div>
-                <div>자생식물2</div>
-                <div>자생식물3</div>
-              </ol>
-            </div>
-          }
-          trigger="click"
-        >
-          <ChestButton />
-        </Popover>
+
         <Popover
           content={
             <div>
@@ -190,6 +191,23 @@ export default function HomePage() {
         >
           <Shoulder2Button />
         </Popover>
+
+        <Popover
+          content={
+            <div>
+              <div>가슴에 좋은 자생식물</div>
+              <ol>
+                <div>자생식물1</div>
+                <div>자생식물2</div>
+                <div>자생식물3</div>
+              </ol>
+            </div>
+          }
+          trigger="click"
+        >
+          <ChestButton />
+        </Popover>
+
         <Popover
           content={
             <div>
@@ -204,6 +222,38 @@ export default function HomePage() {
           trigger="click"
         >
           <AbdomenButton />
+        </Popover>
+
+        <Popover
+          content={
+            <div>
+              <div>허벅지에 좋은 자생식물</div>
+              <ol>
+                <div>자생식물1</div>
+                <div>자생식물2</div>
+                <div>자생식물3</div>
+              </ol>
+            </div>
+          }
+          trigger="click"
+        >
+          <ThighButton />
+        </Popover>
+
+        <Popover
+          content={
+            <div>
+              <div>허벅지에 좋은 자생식물</div>
+              <ol>
+                <div>자생식물1</div>
+                <div>자생식물2</div>
+                <div>자생식물3</div>
+              </ol>
+            </div>
+          }
+          trigger="click"
+        >
+          <Thigh2Button />
         </Popover>
       </Relative>
       <div>자생식물은 우수해요. 기존 건강기능식품에 비해 저렴한 가격에 효능을 얻을 수 있어요.</div>
