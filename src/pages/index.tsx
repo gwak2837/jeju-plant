@@ -33,23 +33,6 @@ const WhiteButton = styled.button`
   padding: 0.7rem;
 `
 
-const Snap = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  scroll-snap-align: center;
-
-  animation-timing-function: ease;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-
-  @media (prefers-reduced-motion: reduce) {
-    animation-name: none;
-  }
-`
-
 const Relative = styled.div`
   position: relative;
   margin: 0 auto;
@@ -63,58 +46,58 @@ const Button = styled.button`
 `
 
 const HeadButton = styled(Button)`
-  width: 4.5rem;
-  height: 4.3rem;
-  top: 0;
+  width: 21%;
+  height: 12%;
+  top: 1px;
   left: 50%;
 `
 
 const NeckButton = styled(Button)`
-  width: 4.5rem;
-  height: 1.5rem;
-  top: 4.5rem;
+  width: 21%;
+  height: 4%;
+  top: 13%;
   left: 50%;
 `
 
 const ShoulderButton = styled(Button)`
-  width: 2.1rem;
-  height: 4rem;
-  top: 5.5rem;
+  width: 10%;
+  height: 10%;
+  top: 16%;
   left: 39%;
 `
 
 const Shoulder2Button = styled(Button)`
-  width: 2rem;
-  height: 4rem;
-  top: 5.5rem;
+  width: 10%;
+  height: 10%;
+  top: 16%;
   left: 72%;
 `
 
 const ChestButton = styled(Button)`
-  width: 4.5rem;
-  height: 4rem;
-  top: 6.2rem;
+  width: 21%;
+  height: 12%;
+  top: 18%;
   left: 50%;
 `
 
 const AbdomenButton = styled(Button)`
-  width: 4.5rem;
-  height: 4.5rem;
-  top: 10.4rem;
+  width: 21%;
+  height: 14%;
+  top: 31%;
   left: 50%;
 `
 
 const ThighButton = styled(Button)`
-  width: 3.8rem;
-  height: 7rem;
-  top: 15.4rem;
-  left: 42%;
+  width: 16%;
+  height: 20%;
+  top: 46%;
+  left: 44%;
 `
 
 const Thigh2Button = styled(Button)`
-  width: 3.7rem;
-  height: 7rem;
-  top: 15.4rem;
+  width: 16%;
+  height: 20%;
+  top: 46%;
   left: 62%;
 `
 
@@ -127,6 +110,7 @@ export default function HomePage() {
       <Sticky>
         {!nickname && <WhiteButton onClick={() => router.push('/login')}>로그인</WhiteButton>}
       </Sticky>
+
       <Relative>
         <Image src="/images/body.png" alt="body" width="385" height="607" />
         <Popover
